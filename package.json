@@ -3,7 +3,7 @@
   "version": "0.1.0",
   "private": true,
   "type": "module",
-  "description": "Ambassador CRM agent — query ambassador data, campaigns, and collaboration history via Slack",
+  "description": "Ambassador CRM agent \u2014 query ambassador data, campaigns, and collaboration history via Slack",
   "main": "dist/index.js",
   "scripts": {
     "build": "tsc",
@@ -14,7 +14,9 @@
   },
   "dependencies": {
     "@anthropic-ai/sdk": "^0.39.0",
-    "@slack/web-api": "^7.8.0"
+    "@slack/web-api": "^7.8.0",
+    "dotenv": "^8.2.0",
+    "node-fetch": "^3.3.2"
   },
   "devDependencies": {
     "tsx": "^4.19.0",
