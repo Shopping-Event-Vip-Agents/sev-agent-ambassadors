@@ -1,0 +1,12 @@
+{
+  "mcpServers": {
+    "directus-sev-ai": {
+      "command": "npx",
+      "args": ["-y", "@anthropic-ai/directus-mcp-server"],
+      "env": {
+        "DIRECTUS_URL": "${SEV_AI_DIRECTUS_URL}",
+        "DIRECTUS_TOKEN": "${SEV_AI_DIRECTUS_TOKEN}"
+      }
+    }
+  }
+}
