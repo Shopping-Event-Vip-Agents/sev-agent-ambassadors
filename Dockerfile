@@ -1,22 +1,17 @@
 FROM node:22-alpine AS builder
 
-ARG GH_PKG_TOKEN
-
 WORKDIR /app
-COPY package.json .npmrc ./
-RUN npm install
+COPY package.json package-lock.json ./
+RUN npm ci
 COPY tsconfig.json ./
 COPY src/ ./src/
 RUN npm run build
 
 FROM node:22-alpine
 
-ARG GH_PKG_TOKEN
-
 WORKDIR /app
-COPY package.json .npmrc ./
-RUN npm install --omit=dev
-RUN rm -f .npmrc
+COPY package.json package-lock.json ./
+RUN npm ci --omit=dev
 COPY --from=builder /app/dist ./dist
 
 ENV NODE_ENV=production
