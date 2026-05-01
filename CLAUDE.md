@@ -88,3 +88,12 @@ This back-and-forth ensures every plan gets a second AI opinion before execution
 ## Project Pickup
 
 See [`PICKUP.md`](../PICKUP.md) in the project root for all unfinished projects and their remaining tasks.
+
+---
+
+## Stack Reference
+
+<!-- STACK-REF-v1 -->
+This repo is part of the sev-ai platform. The canonical stack reference (architecture, data flow, who-talks-to-whom, planned changes) lives at the workspace root: **`docs/architecture/STACK-OVERVIEW.md`**.
+
+When this repo changes its role, integrations, dependencies, or LLM usage in a way that affects the platform shape, **update `STACK-OVERVIEW.md` in the same commit**. The file has its own update checklist at the bottom.
